@@ -10,9 +10,9 @@ memory::desc create_memory_desc(const memory::dims& dims, memory::format_tag for
 
 // Initialize memory and fill with data
 memory initialize_memory(const memory::desc& md, engine& eng, std::vector<float>& data) {
-    printf("Memory initialized\n"); 
+    // printf("Memory initialized\n"); 
     memory mem(md, eng);
-    printf("Memory initialized\n"); 
+    // printf("Memory initialized\n"); 
     write_to_dnnl_memory(data.data(), mem);
     return mem;
 }
